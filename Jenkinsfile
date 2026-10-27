@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'python3 -m py_compile hello.py'
+                sh 'python -m py_compile hello.py'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'python3 test.py'
+                sh 'python test.py'
             }
         }
     }
