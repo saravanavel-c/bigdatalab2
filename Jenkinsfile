@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     environment {
-        IMAGE = 'saravanavelc/flask-docker-app'
-        TAG = "${BUILD_NUMBER}"
-    }
+    IMAGE = 'saravanavelc/flask-docker-app'
+    TAG = "${BUILD_NUMBER}"
+    PATH+DOCKER = 'C:\Users\Saravana Vel\AppData\Local\Programs\DockerDesktop\resources\bin'
+}
 
     stages {
         stage('Build Python') {
